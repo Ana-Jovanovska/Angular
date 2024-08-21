@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { LoggerService } from '../../../../service/logger.service';
-import { JobsService } from '../../../../service/jobs.service';
 
 @Component({
   selector: 'app-applied-jobs-list',
@@ -11,11 +10,8 @@ import { JobsService } from '../../../../service/jobs.service';
 })
 export class AppliedJobsListComponent {
   private loggerService = inject(LoggerService);
-  private jobsService = inject(JobsService);
-
-  selectedJob = this.jobsService.selectedJob;
 
   ngOnInit(): void {
-    this.loggerService.logDetails('Job Details');
+    this.loggerService.logDetails('Movie Details');
   }
 }
