@@ -16,22 +16,15 @@ export class ToggleJobsDirective implements OnInit {
   private elementRef = inject(ElementRef);
   private renderer = inject(Renderer2);
 
-  isInitiallyClick = input(false);
   addJobsDetails: HTMLDivElement;
-  isClick = false;
+  isClick: boolean = false;
 
   ngOnInit(): void {
     console.log('directive create');
     this.addJobsDetails =
       this.elementRef.nativeElement.querySelector('.buttonApply');
 
-    this.isClick = this.isInitiallyClick();
-
-    this.renderer.setStyle(
-      this.addJobsDetails,
-      'display',
-      this.isClick ? 'block' : 'none'
-    );
+    this.renderer.setStyle(this.addJobsDetails, 'display', 'block');
   }
 
   @HostListener('click') onClick() {
