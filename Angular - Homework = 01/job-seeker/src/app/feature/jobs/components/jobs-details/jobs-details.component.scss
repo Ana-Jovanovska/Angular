@@ -1,0 +1,39 @@
+.jobs-details-container {
+  width: 550px;
+  padding: 50px;
+
+  .details-body {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #e4e2e2;
+    border: 1px solid #83a9d7;
+    border-radius: 8px;
+
+    p {
+      margin: 5px 0;
+      font-size: 17px;
+      color: #555;
+    }
+
+    .details-body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .work-type-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .more-details {
+      margin-top: 10px;
+      cursor: pointer;
+
+      p {
+        padding-left: 15px;
+      }
+    }
+  }
+}

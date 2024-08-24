@@ -1,0 +1,28 @@
+<section class="jobs-details-container">
+    <div class="details-body">
+        <div class="jobs-id">Id:
+            {{jobs().id}}
+        </div>
+        <div class="details-body">
+            <p>Company:{{jobs().company}}</p>
+            <p>Expires:{{jobs().expires}}</p>
+            <p>Position:{{jobs().position}}</p>
+            <p>Starting Salary:{{jobs().startingSalary}}</p>
+            <div class="work-type-row">
+                <p>Work Type:{{jobs().workType}}</p>
+                <div class="button">
+                    <app-button text="Apply" (btnClick)="appliedJobs(jobs().id)" />
+                </div>
+            </div>
+        </div>
+        <div class="more-details" appToogleDetails>
+            <p>More...</p>
+            <div class="more-details">
+                <p>Location:{{jobs().location}}</p>
+                <p>Contry:{{jobs().country}}</p>
+                <p>Qualifications:{{jobs().qualifications}}</p>
+                <p>Description:{{jobs().description}}</p>
+            </div>
+        </div>
+    </div>
+</section>daa
