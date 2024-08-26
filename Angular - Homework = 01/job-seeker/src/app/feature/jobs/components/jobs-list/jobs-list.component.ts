@@ -17,4 +17,8 @@ export class JobsListComponent {
   ngOnInit(): void {
     console.log(`Job service create`);
   }
+
+  clickCancelButton() {
+    console.log(`Element apply click`);
+  }
 }
