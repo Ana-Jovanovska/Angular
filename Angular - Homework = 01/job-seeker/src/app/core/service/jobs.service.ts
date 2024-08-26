@@ -1,24 +1,16 @@
-import { computed, Injectable, signal } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
+import { Jobs } from '../../feature/models/jobs.model';
 import { jobsMock } from '../../feature/jobs/jobs.mock';
-import { Jobs } from '../../feature/jobs/models/jobs.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class JobsService {
-  jobs = signal<Jobs[]>(jobsMock);
-  selectedJobs = signal<Jobs[]>(null);
+  job = signal<Jobs[]>(jobsMock);
+  selectedJobs = signal<Jobs[]>([]);
 
-  getJobById(id: number) {
-    this.jobs().find((job) => job.id === id);
-  }
-
-  appliedJob = computed<number>(() => {
-    return this.selectedJobs().length;
-  });
-
-  appliedJobs(id: number) {
-    this.jobs.update((prev) =>
+  applyJobs(id: number) {
+    this.job.update((prev) =>
       prev.map((jobs) => {
         if (jobs.id === id) {
           jobs.isApplied = true;
@@ -28,11 +20,11 @@ export class JobsService {
         }
       })
     );
-    this.selectedJobs.set(this.jobs().filter((jobs) => jobs.isApplied));
+    this.selectedJobs.set(this.job().filter((jobs) => jobs.isApplied));
   }
 
-  canceleJobs(id: number) {
-    this.jobs.update((prev) =>
+  cancelJobs(id: number) {
+    this.job.update((prev) =>
       prev.map((jobs) => {
         if (jobs.id === id) {
           jobs.isApplied = false;
@@ -42,6 +34,6 @@ export class JobsService {
         }
       })
     );
-    this.selectedJobs.set(this.jobs().filter((jobs) => jobs.isApplied));
+    this.selectedJobs.set(this.job().filter((jobs) => jobs.isApplied));
   }
 }

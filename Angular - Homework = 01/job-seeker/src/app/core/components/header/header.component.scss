@@ -1,7 +1,7 @@
 header {
   width: 100%;
   height: 100px;
-  background-color: #83a9d7;
+  background-color: #35495e;
   display: grid;
   grid-template-columns: 1fr max-content;
   align-items: center;
@@ -32,11 +32,10 @@ header {
         }
 
         .active {
-          background-color: #85c6ff;
+          background-color: #407088;
           padding: 5px;
           border-radius: 4px;
-          color: black;
-          font-weight: 300;
+          font-weight: 500;
         }
       }
     }
