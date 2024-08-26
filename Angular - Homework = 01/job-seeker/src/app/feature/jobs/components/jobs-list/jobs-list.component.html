@@ -1,5 +1,7 @@
 <div class="jobs-details-container">
-    <h1>Apply Jobs</h1>
+    <div class="jobs-header">
+        <h1>Apply Jobs</h1>
+    </div>
     <div class="jobs-body">
         <div class="jobs-body">
             <p>Company:</p>
@@ -9,7 +11,7 @@
             <p>Work Type:</p>
             <div class="work-type-row">
                 <div class="button">
-                    <app-button text="Apply" (btnClick)="clickCancelButton()" />
+                    <app-button text="Cancel" (btnClick)="clickCancelButton()" />
                 </div>
             </div>
         </div>
@@ -20,7 +22,14 @@
                 <p>Contry:</p>
                 <p>Qualifications:</p>
                 <p>Description:</p>
+                <div class="company-button">
+                    <div class="company-button">
+                        <app-button text="Company view" (btnClick)="clickCompanyButton()" />
+                    </div>
+                </div>
             </div>
+
         </div>
+
     </div>
 </div>

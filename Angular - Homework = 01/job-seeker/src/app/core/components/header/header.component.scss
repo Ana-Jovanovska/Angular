@@ -32,10 +32,11 @@ header {
         }
 
         .active {
-          background-color: #407088;
+          background-color: RGB(135, 39, 68);
+          color: white;
           padding: 5px;
           border-radius: 4px;
-          font-weight: 500;
+          font-weight: 300;
         }
       }
     }

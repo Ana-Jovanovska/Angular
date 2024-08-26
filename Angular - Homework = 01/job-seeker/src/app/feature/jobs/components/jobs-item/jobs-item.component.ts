@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../../../shared/button/button.component';
 import { ToogleDetailsDirective } from '../../../../core/directives/toogle-details.directive';
 import { JobsService } from '../../../../core/service/jobs.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-jobs-item',
@@ -14,6 +15,7 @@ import { JobsService } from '../../../../core/service/jobs.service';
 })
 export class JobsItemComponent {
   private jobService = inject(JobsService);
+  private router = inject(Router);
   job = input<Jobs>();
 
   ngOnInit(): void {
@@ -22,5 +24,8 @@ export class JobsItemComponent {
 
   clickApplyButton() {
     console.log(`Element apply click`);
+  }
+  clickCompanyButton() {
+    this.router.navigate(['company']);
   }
 }
