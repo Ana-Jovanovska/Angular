@@ -4,27 +4,27 @@
     </div>
     <div class="jobs-body">
         <div class="jobs-body">
-            <p>Company:</p>
-            <p>Expires:</p>
-            <p>Position:</p>
-            <p>Starting Salary:</p>
-            <p>Work Type:</p>
+            <p>Company:{{job().company}}</p>
+            <p>Expires:{{job().expires}}</p>
+            <p>Position:{{job().position}}</p>
+            <p>Starting Salary:{{job().startingSalary}}</p>
+            <p>Work Type:{{job().workType}}</p>
             <div class="work-type-row">
                 <div class="button">
-                    <app-button text="Apply" (btnClick)="clickApplyButton()" />
+                    <app-button text="Apply" (btnClick)="clickApplyButton(job().id)" />
                 </div>
             </div>
         </div>
-        <div class="more-details" appToogleDetails>
+        <div class=" more-details" appToogleDetails>
             <p>More...</p>
             <div class="more-details">
-                <p>Location:</p>
-                <p>Contry:</p>
-                <p>Qualifications:</p>
-                <p>Description:</p>
+                <p>Location:{{job().location}}</p>
+                <p>Contry:{{job().country}}</p>
+                <p>Qualifications:{{job().qualifications}}</p>
+                <p>Description:{{job().description}}</p>
                 <div class="company-button">
                     <div class="company-button">
-                        <app-button text="Company view" (btnClick)="clickCompanyButton()" />
+                        <app-button text="Company view" (btnClick)="clickCompanyButton(job().id)" />
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
             <p>Work Type:</p>
             <div class="work-type-row">
                 <div class="button">
-                    <app-button text="Apply" (btnClick)="clickApplyButton()" />
+                    <app-button text="Apply" />
                 </div>
             </div>
         </div>
@@ -57,7 +57,7 @@
                 <p>Description:</p>
                 <div class="company-button">
                     <div class="company-button">
-                        <app-button text="Company view" (btnClick)="clickCompanyButton()" />
+                        <app-button text="Company view" (btnClick)="clickCompanyButton(job().id)" />
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@
             <p>Work Type:</p>
             <div class="work-type-row">
                 <div class="button">
-                    <app-button text="Apply" (btnClick)="clickApplyButton()" />
+                    <app-button text="Apply" />
                 </div>
             </div>
         </div>
@@ -90,7 +90,7 @@
                 <p>Description:</p>
                 <div class="company-button">
                     <div class="company-button">
-                        <app-button text="Company view" (btnClick)="clickCompanyButton()" />
+                        <app-button text="Company view" (btnClick)="clickCompanyButton(job().id)" />
                     </div>
                 </div>
             </div>
@@ -110,7 +110,7 @@
             <p>Work Type:</p>
             <div class="work-type-row">
                 <div class="button">
-                    <app-button text="Apply" (btnClick)="clickApplyButton()" />
+                    <app-button text="Apply" />
                 </div>
             </div>
         </div>
@@ -123,7 +123,7 @@
                 <p>Description:</p>
                 <div class="company-button">
                     <div class="company-button">
-                        <app-button text="Company view" (btnClick)="clickCompanyButton()" />
+                        <app-button text="Company view" (btnClick)="clickCompanyButton(job().id)" />
                     </div>
                 </div>
             </div>
@@ -143,7 +143,7 @@
             <p>Work Type:</p>
             <div class="work-type-row">
                 <div class="button">
-                    <app-button text="Apply" (btnClick)="clickApplyButton()" />
+                    <app-button text="Apply" />
                 </div>
             </div>
         </div>
@@ -156,7 +156,7 @@
                 <p>Description:</p>
                 <div class="company-button">
                     <div class="company-button">
-                        <app-button text="Company view" (btnClick)="clickCompanyButton()" />
+                        <app-button text="Company view" (btnClick)="clickCompanyButton(job().id)" />
                     </div>
                 </div>
             </div>

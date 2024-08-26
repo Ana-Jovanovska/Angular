@@ -6,34 +6,34 @@ import { jobsMock } from '../../feature/jobs/jobs.mock';
   providedIn: 'root',
 })
 export class JobsService {
-  job = signal<Jobs[]>(jobsMock);
+  jobs = signal<Jobs[]>(jobsMock);
   selectedJobs = signal<Jobs[]>([]);
 
-  applyJobs(id: number) {
-    this.job.update((prev) =>
-      prev.map((jobs) => {
-        if (jobs.id === id) {
-          jobs.isApplied = true;
-          return jobs;
+  applyJob(id: number) {
+    this.jobs.update((prev) =>
+      prev.map((job) => {
+        if (job.id === id) {
+          job.isApplied = true;
+          return job;
         } else {
-          return jobs;
+          return job;
         }
       })
     );
-    this.selectedJobs.set(this.job().filter((jobs) => jobs.isApplied));
+    this.selectedJobs.set(this.jobs().filter((job) => job.isApplied));
   }
 
-  cancelJobs(id: number) {
-    this.job.update((prev) =>
-      prev.map((jobs) => {
-        if (jobs.id === id) {
-          jobs.isApplied = false;
-          return jobs;
+  cancelJob(id: number) {
+    this.jobs.update((prev) =>
+      prev.map((job) => {
+        if (job.id === id) {
+          job.isApplied = false;
+          return job;
         } else {
-          return jobs;
+          return job;
         }
       })
     );
-    this.selectedJobs.set(this.job().filter((jobs) => jobs.isApplied));
+    this.selectedJobs.set(this.jobs().filter((job) => job.isApplied));
   }
 }

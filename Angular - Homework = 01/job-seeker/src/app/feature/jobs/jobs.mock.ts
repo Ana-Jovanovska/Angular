@@ -1,4 +1,4 @@
-import { Jobs } from './models/jobs.model';
+import { Jobs } from '../models/jobs.model';
 
 export const jobsMock: Jobs[] = [
   {

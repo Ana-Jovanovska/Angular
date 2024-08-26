@@ -11,7 +11,7 @@
             <p>Work Type:</p>
             <div class="work-type-row">
                 <div class="button">
-                    <app-button text="Cancel" (btnClick)="clickCancelButton()" />
+                    <app-button text="Cancel" (btnClick)="clickCancelButton(applyJob().id)" />
                 </div>
             </div>
         </div>
@@ -24,7 +24,7 @@
                 <p>Description:</p>
                 <div class="company-button">
                     <div class="company-button">
-                        <app-button text="Company view" (btnClick)="clickCompanyButton()" />
+                        <app-button text="Company view" (btnClick)="clickCompanyButton(applyJob().id)" />
                     </div>
                 </div>
             </div>
