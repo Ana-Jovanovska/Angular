@@ -18,15 +18,10 @@ export class AvaiableItemComponent {
   private router = inject(Router);
   job = input<Jobs>();
 
-  ngOnInit(): void {
-    console.log(`Job service create`);
-  }
-
   clickApplyButton(id: number) {
-    console.log(`Element apply click`);
     this.jobService.applyJob(id);
   }
-  clickCompanyButton(id: number) {
-    this.router.navigate(['company', id]);
+  clickCompanyButton() {
+    this.router.navigate(['company']);
   }
 }

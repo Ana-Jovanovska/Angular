@@ -1,33 +1,20 @@
-import { Component, inject, input } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
 import { Jobs } from '../../../models/jobs.model';
+import { AppliedItemComponent } from '../applied-item/applied-item.component';
 import { JobsService } from '../../../../core/service/jobs.service';
-import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { ToogleDetailsDirective } from '../../../../core/directives/toogle-details.directive';
-import { ButtonComponent } from '../../../../shared/button/button.component';
 
 @Component({
   selector: 'app-applied-list',
   standalone: true,
-  imports: [CommonModule, ToogleDetailsDirective, ButtonComponent],
+  imports: [CommonModule, AppliedItemComponent],
   templateUrl: './applied-list.component.html',
   styleUrl: './applied-list.component.scss',
 })
 export class AppliedListComponent {
-  private jobService = inject(JobsService);
-  private router = inject(Router);
-  applyJob = input<Jobs>(null);
+  private jobsService = inject(JobsService);
 
-  ngOnInit(): void {
-    console.log(`Job service create`);
-  }
-
-  clickCancelButton(id: number) {
-    console.log(`Element apply click`);
-    this.jobService.cancelJob(id);
-  }
-
-  clickCompanyButton(id: number) {
-    this.router.navigate(['company', id]);
-  }
+  selectJobs = computed<Jobs[]>(() => {
+    return this.jobsService.selectedJobs();
+  });
 }

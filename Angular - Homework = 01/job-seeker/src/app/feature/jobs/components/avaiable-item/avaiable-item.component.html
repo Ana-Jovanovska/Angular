@@ -4,162 +4,30 @@
     </div>
     <div class="jobs-body">
         <div class="jobs-body">
-            <p>Company:{{job().company}}</p>
-            <p>Expires:{{job().expires}}</p>
-            <p>Position:{{job().position}}</p>
-            <p>Starting Salary:{{job().startingSalary}}</p>
-            <p>Work Type:{{job().workType}}</p>
+            <p>{{job().company}}</p>
+            <p>{{job().expires | date:'fullDate' }} </p>
+            <p>{{job().position}} </p>
+            <p>{{job().startingSalary | currency: 'EUR' : 'symbol' : '1.0'}} / {{job().workType}}</p>
             <div class="work-type-row">
                 <div class="button">
                     <app-button text="Apply" (btnClick)="clickApplyButton(job().id)" />
                 </div>
             </div>
         </div>
-        <div class=" more-details" appToogleDetails>
-            <p>More...</p>
-            <div class="more-details">
-                <p>Location:{{job().location}}</p>
-                <p>Contry:{{job().country}}</p>
-                <p>Qualifications:{{job().qualifications}}</p>
-                <p>Description:{{job().description}}</p>
+    </div>
+    <div class=" more-details" appToogleDetails>
+        <p>More...</p>
+        <div class="more-details">
+            <p>{{job().location}}</p>
+            <p>{{job().country}}</p>
+            <p>{{job().qualifications}}</p>
+            <p>{{job().description}}</p>
+            <div class="company-button">
                 <div class="company-button">
-                    <div class="company-button">
-                        <app-button text="Company view" (btnClick)="clickCompanyButton(job().id)" />
-                    </div>
+                    <app-button text="Company view" (btnClick)="clickCompanyButton()" />
                 </div>
             </div>
         </div>
     </div>
-</div>
-<div class="jobs-details-container">
-    <div class="jobs-header">
-        <h1>Avaible Jobs</h1>
-    </div>
-    <div class="jobs-body">
-        <div class="jobs-body">
-            <p>Company:</p>
-            <p>Expires:</p>
-            <p>Position:</p>
-            <p>Starting Salary:</p>
-            <p>Work Type:</p>
-            <div class="work-type-row">
-                <div class="button">
-                    <app-button text="Apply" />
-                </div>
-            </div>
-        </div>
-        <div class="more-details" appToogleDetails>
-            <p>More...</p>
-            <div class="more-details">
-                <p>Location:</p>
-                <p>Contry:</p>
-                <p>Qualifications:</p>
-                <p>Description:</p>
-                <div class="company-button">
-                    <div class="company-button">
-                        <app-button text="Company view" (btnClick)="clickCompanyButton(job().id)" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="jobs-details-container">
-    <div class="jobs-header">
-        <h1>Avaible Jobs</h1>
-    </div>
-    <div class="jobs-body">
-        <div class="jobs-body">
-            <p>Company:</p>
-            <p>Expires:</p>
-            <p>Position:</p>
-            <p>Starting Salary:</p>
-            <p>Work Type:</p>
-            <div class="work-type-row">
-                <div class="button">
-                    <app-button text="Apply" />
-                </div>
-            </div>
-        </div>
-        <div class="more-details" appToogleDetails>
-            <p>More...</p>
-            <div class="more-details">
-                <p>Location:</p>
-                <p>Contry:</p>
-                <p>Qualifications:</p>
-                <p>Description:</p>
-                <div class="company-button">
-                    <div class="company-button">
-                        <app-button text="Company view" (btnClick)="clickCompanyButton(job().id)" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="jobs-details-container">
-    <div class="jobs-header">
-        <h1>Avaible Jobs</h1>
-    </div>
-    <div class="jobs-body">
-        <div class="jobs-body">
-            <p>Company:</p>
-            <p>Expires:</p>
-            <p>Position:</p>
-            <p>Starting Salary:</p>
-            <p>Work Type:</p>
-            <div class="work-type-row">
-                <div class="button">
-                    <app-button text="Apply" />
-                </div>
-            </div>
-        </div>
-        <div class="more-details" appToogleDetails>
-            <p>More...</p>
-            <div class="more-details">
-                <p>Location:</p>
-                <p>Contry:</p>
-                <p>Qualifications:</p>
-                <p>Description:</p>
-                <div class="company-button">
-                    <div class="company-button">
-                        <app-button text="Company view" (btnClick)="clickCompanyButton(job().id)" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="jobs-details-container">
-    <div class="jobs-header">
-        <h1>Avaible Jobs</h1>
-    </div>
-    <div class="jobs-body">
-        <div class="jobs-body">
-            <p>Company:</p>
-            <p>Expires:</p>
-            <p>Position:</p>
-            <p>Starting Salary:</p>
-            <p>Work Type:</p>
-            <div class="work-type-row">
-                <div class="button">
-                    <app-button text="Apply" />
-                </div>
-            </div>
-        </div>
-        <div class="more-details" appToogleDetails>
-            <p>More...</p>
-            <div class="more-details">
-                <p>Location:</p>
-                <p>Contry:</p>
-                <p>Qualifications:</p>
-                <p>Description:</p>
-                <div class="company-button">
-                    <div class="company-button">
-                        <app-button text="Company view" (btnClick)="clickCompanyButton(job().id)" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
 </div>

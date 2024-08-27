@@ -21,7 +21,6 @@ export class ToogleDetailsDirective implements OnInit {
   isClick = false;
 
   ngOnInit(): void {
-    console.log(`directives create`);
     this.addMoreDetailsEl =
       this.elementRef.nativeElement.querySelector('.more-details');
 
@@ -35,7 +34,6 @@ export class ToogleDetailsDirective implements OnInit {
   }
 
   @HostListener('click') onClick() {
-    console.log(`element click`);
     this.isClick = !this.isClick;
     this.renderer.setStyle(
       this.addMoreDetailsEl,

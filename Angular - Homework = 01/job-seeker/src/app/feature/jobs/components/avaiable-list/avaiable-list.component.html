@@ -1,1 +1,7 @@
-<p>avaiable-list works!</p>
+<div>
+    <div>
+        @for (job of jobs(); track job.id) {
+        <app-avaiable-item [job]="job" />
+        }
+    </div>
+</div>

@@ -1,35 +1,8 @@
-<div class="jobs-details-container">
-    <div class="jobs-header">
-        <h1>Apply Jobs</h1>
-    </div>
-    <div class="jobs-body">
-        <div class="jobs-body">
-            <p>Company:</p>
-            <p>Expires:</p>
-            <p>Position:</p>
-            <p>Starting Salary:</p>
-            <p>Work Type:</p>
-            <div class="work-type-row">
-                <div class="button">
-                    <app-button text="Cancel" (btnClick)="clickCancelButton(applyJob().id)" />
-                </div>
-            </div>
-        </div>
-        <div class="more-details" appToogleDetails>
-            <p>More...</p>
-            <div class="more-details">
-                <p>Location:</p>
-                <p>Contry:</p>
-                <p>Qualifications:</p>
-                <p>Description:</p>
-                <div class="company-button">
-                    <div class="company-button">
-                        <app-button text="Company view" (btnClick)="clickCompanyButton(applyJob().id)" />
-                    </div>
-                </div>
-            </div>
+<div class="">
 
-        </div>
-
+    <div>
+        @for (job of selectJobs(); track job.id) {
+        <app-applied-item [selectedJobs]="job" />
+        }
     </div>
 </div>
