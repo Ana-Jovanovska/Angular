@@ -12,9 +12,10 @@ export const jobsMock: Jobs[] = [
     country: 'USA',
     qualifications: 'Experience with React and TypeScript',
     description:
-      'We are looking for a skilled Frontend Developer to join our team...',
+      'We are looking for a skilled Frontend Developer to join our team. You will be responsible for creating intuitive and dynamic user interfaces for our cutting-edge web applications. Your role will involve working closely with designers and backend developers to implement high-quality features that enhance the user experience. Strong knowledge of React and TypeScript is essential, along with a passion for staying updated with the latest frontend trends.',
     isApplied: false,
   },
+  /*
   {
     id: 2,
     company: 'Global Solutions Ltd.',
@@ -26,7 +27,7 @@ export const jobsMock: Jobs[] = [
     country: 'UK',
     qualifications: 'Proficient in Node.js and Express',
     description:
-      'Join our backend team to work on scalable web applications...',
+      'Join our backend team to work on scalable web applications that serve millions of users worldwide. As a Backend Developer, you will be responsible for designing, developing, and maintaining our server-side logic and databases. Your expertise in Node.js and Express will be crucial in optimizing performance and ensuring the robustness of our systems. Collaboration with frontend teams and a strong understanding of security practices are also key to this role.',
     isApplied: false,
   },
   {
@@ -40,7 +41,7 @@ export const jobsMock: Jobs[] = [
     country: 'Germany',
     qualifications: 'Experience with both frontend and backend technologies',
     description:
-      'We are seeking a Full Stack Developer with experience in both...',
+      'We are seeking a Full Stack Developer with experience in both frontend and backend technologies. In this role, you will take part in the full software development lifecycle, from conception to deployment. You will work on a variety of projects, building responsive web applications and APIs that support seamless interactions between users and our platforms. The ideal candidate will have a solid foundation in both client-side and server-side development, with an emphasis on performance and scalability.',
     isApplied: false,
   },
   {
@@ -54,7 +55,7 @@ export const jobsMock: Jobs[] = [
     country: 'USA',
     qualifications: 'Experience in data analysis and machine learning',
     description:
-      'We are looking for a Data Scientist to help us analyze data and...',
+      'We are looking for a Data Scientist to help us analyze data and derive actionable insights that will drive our business decisions. You will work with large datasets to uncover trends and patterns, applying machine learning techniques to build predictive models. Your role will involve collaborating with cross-functional teams to translate data findings into strategic initiatives. Proficiency in data analysis, statistical modeling, and machine learning algorithms is essential.',
     isApplied: false,
   },
   {
@@ -68,7 +69,8 @@ export const jobsMock: Jobs[] = [
     country: 'Netherlands',
     qualifications: 'Strong portfolio of UI/UX design projects',
     description:
-      'We are seeking a creative UI/UX Designer to improve the user experience...',
+      'We are seeking a creative UI/UX Designer to improve the user experience across our digital products. You will be responsible for designing user interfaces that are not only visually appealing but also highly functional and user-friendly. Working closely with product managers and developers, you will conduct user research, create wireframes, and iterate on designs to meet user needs and business goals. A strong portfolio showcasing your UI/UX design projects is required.',
     isApplied: false,
   },
+  */
 ];

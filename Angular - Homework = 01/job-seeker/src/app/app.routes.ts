@@ -5,6 +5,9 @@ import { ProfileComponent } from './feature/profile/profile.component';
 import { CompanyComponent } from './feature/company/company.component';
 import { NotFoundComponent } from './shared/not-found/not-found.component';
 
+import { ContactUsComponent } from './feature/contact-us/contact-us.component';
+import { AddJobsComponent } from './feature/jobs/components/add-jobs/add-jobs.component';
+
 export const routes: Routes = [
   {
     path: '',
@@ -21,6 +24,14 @@ export const routes: Routes = [
   {
     path: 'company',
     component: CompanyComponent,
+  },
+  {
+    path: 'add-jobs',
+    component: AddJobsComponent,
+  },
+  {
+    path: 'contact-us',
+    component: ContactUsComponent,
   },
   {
     path: '**',

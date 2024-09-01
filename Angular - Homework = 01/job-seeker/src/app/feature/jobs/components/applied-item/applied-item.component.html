@@ -4,7 +4,7 @@
     </div>
     <div class="jobs-body">
         <div class="jobs-body">
-            <p>{{selectedJobs().company}}</p>
+            <h2>{{selectedJobs().company}}</h2>
             <p>{{selectedJobs().expires | date:'fullDate' }} </p>
             <p>{{selectedJobs().position}} </p>
             <p>{{selectedJobs().startingSalary | currency: 'EUR' : 'symbol' : '1.0'}} / {{selectedJobs().workType}}</p>
@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="more-details" appToogleDetails>
-            <p>More...</p>
+            <h4>More...</h4>
             <div class="more-details">
                 <p>{{selectedJobs().location}}</p>
                 <p>{{selectedJobs().country}}</p>

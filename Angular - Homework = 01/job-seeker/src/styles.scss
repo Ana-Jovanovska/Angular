@@ -7,71 +7,89 @@ html {
 
 body {
   margin: 0;
+  background-color: #f2f2f2;
 }
-
 .jobs-details-container {
-  width: 500px;
+  max-width: 600px;
+  margin: 50px;
   padding: 20px;
-  margin: 20px;
-  background: linear-gradient(to top, #09203f 0%, #537895 100%);
+  background-color: #f8f9fa;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
-  display: flex;
-
-  &:hover {
-    transform: scale(1.04);
-  }
 
   .jobs-header {
-    margin-bottom: 20px;
+    text-align: center;
 
     h1 {
-      display: flex;
-      justify-content: center;
-      font-size: 25px;
-      color: white;
-      text-transform: uppercase;
-      border-bottom: 2px solid RGB(135, 39, 68);
-      padding-bottom: 10px;
+      color: #343a40;
+      margin-bottom: 30px;
     }
   }
 
   .jobs-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5px;
-    margin-top: 10px;
-    padding-left: 15px;
+    text-align: center;
 
-    p {
-      margin: 0;
-      font-size: 16px;
-      color: white;
+    h2 {
+      font-size: 20px;
+      color: #007bff;
     }
 
-    .button {
-      app-button {
-        border: none;
-        color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
+    p {
+      font-size: 16px;
+      color: #495057;
+      margin-bottom: 10px;
+    }
+
+    .work-type-row {
+      margin-top: 15px;
+      text-align: center;
+
+      .button {
+        display: inline-block;
+
+        app-button {
+          padding: 10px 20px;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
       }
     }
   }
 
   .more-details {
-    p {
-      font-size: 14px;
-      color: white;
-      cursor: pointer;
-      transition: color 0.3s ease;
+    text-align: center;
 
-      &:hover {
-        color: whiteDv;
+    h4 {
+      font-size: 18px;
+      color: #007bff;
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+
+    div {
+      padding: 10px;
+      background-color: #e9ecef;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #495057;
+      margin-bottom: 10px;
+    }
+
+    .company-button {
+      text-align: center;
+
+      app-button {
+        padding: 10px 20px;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
       }
     }
   }
