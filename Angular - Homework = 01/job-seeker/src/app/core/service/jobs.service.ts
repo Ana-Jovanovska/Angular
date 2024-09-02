@@ -1,6 +1,7 @@
-import { Injectable, signal } from '@angular/core';
+import { inject, Injectable, signal } from '@angular/core';
 import { Jobs } from '../../feature/models/jobs.model';
 import { jobsMock } from '../../feature/jobs/jobs.mock';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -8,6 +9,7 @@ import { jobsMock } from '../../feature/jobs/jobs.mock';
 export class JobsService {
   jobs = signal<Jobs[]>(jobsMock);
   selectedJobs = signal<Jobs[]>([]);
+  private router = inject(Router);
 
   applyJob(id: number) {
     this.jobs.update((prev) =>
