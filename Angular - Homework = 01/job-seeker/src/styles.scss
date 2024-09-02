@@ -94,3 +94,83 @@ body {
     }
   }
 }
+.jobs-container {
+  width: 50%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .jobs-header {
+    text-align: center;
+
+    h1 {
+      font-size: 30px;
+    }
+  }
+}
+form {
+  background-color: #e6ecde;
+  padding: 20px;
+  border-radius: 5px;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+
+    textarea {
+      resize: none;
+    }
+
+    label {
+      font-size: 17px;
+      color: #495057;
+    }
+
+    input {
+      border: 2px solid transparent;
+    }
+
+    textarea {
+      border: 2px solid transparent;
+    }
+
+    input.ng-touched.ng-invalid {
+      border: 2px solid rgb(203, 0, 0);
+    }
+
+    textarea.ng-touched.ng-invalid {
+      border: 2px solid rgb(203, 0, 0);
+    }
+
+    .form-input {
+      font-family: "Nunito", sans-serif;
+      font-size: 14px;
+      border-radius: 5px;
+      margin: 5px 0px;
+      padding: 10px;
+      border: none;
+      box-shadow: 0 10px 20px #d0d3ca, 0 6px 6px #d0d3ca;
+    }
+  }
+
+  .control-error {
+    margin: 0;
+    padding-bottom: 10px;
+    color: rgb(203, 0, 0);
+  }
+
+  .form-controls {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-error {
+    text-align: center;
+    color: rgb(203, 0, 0);
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+}

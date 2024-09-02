@@ -11,3 +11,11 @@ export interface Jobs {
   description: string;
   isApplied: boolean;
 }
+
+export interface ContactUs {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: number;
+  message: string;
+}
