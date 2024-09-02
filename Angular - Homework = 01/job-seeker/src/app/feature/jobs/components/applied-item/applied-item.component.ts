@@ -5,11 +5,17 @@ import { JobsService } from '../../../../core/service/jobs.service';
 import { CommonModule } from '@angular/common';
 import { ToogleDetailsDirective } from '../../../../core/directives/toogle-details.directive';
 import { ButtonComponent } from '../../../../shared/button/button.component';
+import { FooterComponent } from '../../../../core/components/footer/footer.component';
 
 @Component({
   selector: 'app-applied-item',
   standalone: true,
-  imports: [CommonModule, ToogleDetailsDirective, ButtonComponent],
+  imports: [
+    CommonModule,
+    ToogleDetailsDirective,
+    ButtonComponent,
+    FooterComponent,
+  ],
   templateUrl: './applied-item.component.html',
   styleUrl: './applied-item.component.scss',
 })

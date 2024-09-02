@@ -15,7 +15,7 @@ export const jobsMock: Jobs[] = [
       'We are looking for a skilled Frontend Developer to join our team. You will be responsible for creating intuitive and dynamic user interfaces for our cutting-edge web applications. Your role will involve working closely with designers and backend developers to implement high-quality features that enhance the user experience. Strong knowledge of React and TypeScript is essential, along with a passion for staying updated with the latest frontend trends.',
     isApplied: false,
   },
-  /*
+
   {
     id: 2,
     company: 'Global Solutions Ltd.',
@@ -30,6 +30,7 @@ export const jobsMock: Jobs[] = [
       'Join our backend team to work on scalable web applications that serve millions of users worldwide. As a Backend Developer, you will be responsible for designing, developing, and maintaining our server-side logic and databases. Your expertise in Node.js and Express will be crucial in optimizing performance and ensuring the robustness of our systems. Collaboration with frontend teams and a strong understanding of security practices are also key to this role.',
     isApplied: false,
   },
+  /*
   {
     id: 3,
     company: 'NextGen Technologies',

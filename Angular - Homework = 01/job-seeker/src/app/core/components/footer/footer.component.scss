@@ -1,0 +1,22 @@
+.footer {
+  display: grid;
+  grid-template-columns: max-content;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 30px;
+  background-color: #f8f9fa;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.8);
+
+  .social-icons {
+    a {
+      color: #007bff;
+      margin: 17px;
+      font-size: 25px;
+      text-decoration: none;
+
+      &:hover {
+        color: #004187;
+      }
+    }
+  }
+}
