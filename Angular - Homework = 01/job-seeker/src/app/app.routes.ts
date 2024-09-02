@@ -7,6 +7,7 @@ import { NotFoundComponent } from './shared/not-found/not-found.component';
 
 import { ContactUsComponent } from './feature/contact-us/contact-us.component';
 import { AddJobsComponent } from './feature/jobs/components/add-jobs/add-jobs.component';
+import { EditJobsComponent } from './feature/jobs/components/edit-jobs/edit-jobs.component';
 
 export const routes: Routes = [
   {
@@ -28,6 +29,10 @@ export const routes: Routes = [
   {
     path: 'add-jobs',
     component: AddJobsComponent,
+  },
+  {
+    path: 'edit-jobs',
+    component: EditJobsComponent,
   },
   {
     path: 'contact-us',

@@ -19,7 +19,7 @@ import {
 export class JobsFormComponent {
   editReviewData = input<Jobs>();
   jobsForm = this.generateForm();
-  maxDescriptionLennght = 10;
+  maxDescriptionLennght = 200;
   jobsSubmitted = signal(false);
   submitOutput = output<ReactiveFormsModule>();
 
@@ -68,11 +68,6 @@ export class JobsFormComponent {
     this.jobsForm.markAllAsTouched();
 
     if (this.jobsForm.invalid) return;
-
-    console.log('Raw value', this.jobsForm.getRawValue());
-
-    console.log('Form Submitteds');
-    console.log(this.jobsForm.value);
 
     this.submitOutput.emit(this.jobsForm.value as ReactiveFormsModule);
   }
