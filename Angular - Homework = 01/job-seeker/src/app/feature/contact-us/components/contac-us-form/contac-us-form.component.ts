@@ -7,11 +7,12 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { ButtonComponent } from '../../../../shared/button/button.component';
 
 @Component({
   selector: 'app-contac-us-form',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, ButtonComponent],
   templateUrl: './contac-us-form.component.html',
   styleUrl: './contac-us-form.component.scss',
 })
@@ -55,6 +56,9 @@ export class ContacUsFormComponent {
     this.contactUsForm.markAllAsTouched();
 
     if (this.contactUsForm.invalid) return;
+
+    console.log(this.contactUsForm.value);
+
     this.submitedOutput.emit(this.contactUsForm.value as ReactiveFormsModule);
   }
 }

@@ -38,4 +38,16 @@ export class JobsService {
     );
     this.selectedJobs.set(this.jobs().filter((job) => job.isApplied));
   }
+
+  onEditJobs(editJobsForm: Jobs) {
+    this.jobs.update((prev) =>
+      prev.map((job) => {
+        if (job.id === editJobsForm.id) {
+          return { ...editJobsForm };
+        } else {
+          return job;
+        }
+      })
+    );
+  }
 }

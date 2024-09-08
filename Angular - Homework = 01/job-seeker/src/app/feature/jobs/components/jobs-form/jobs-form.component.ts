@@ -69,6 +69,8 @@ export class JobsFormComponent {
 
     if (this.jobsForm.invalid) return;
 
+    console.log(this.jobsForm.value);
+
     this.submitOutput.emit(this.jobsForm.value as ReactiveFormsModule);
   }
 }
