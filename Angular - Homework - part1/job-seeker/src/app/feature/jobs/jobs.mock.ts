@@ -2,7 +2,7 @@ import { Jobs } from '../models/jobs.model';
 
 export const jobsMock: Jobs[] = [
   {
-    id: 1,
+    id: '1',
     company: 'Tech Innovators Inc.',
     expires: '2024-09-15',
     position: 'Frontend Developer',
@@ -17,7 +17,7 @@ export const jobsMock: Jobs[] = [
   },
 
   {
-    id: 2,
+    id: '2',
     company: 'Global Solutions Ltd.',
     expires: '2024-08-30',
     position: 'Backend Developer',

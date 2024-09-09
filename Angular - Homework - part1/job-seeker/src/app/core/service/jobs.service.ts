@@ -11,7 +11,7 @@ export class JobsService {
   selectedJobs = signal<Jobs[]>([]);
   private router = inject(Router);
 
-  applyJob(id: number) {
+  applyJob(id: string) {
     this.jobs.update((prev) =>
       prev.map((job) => {
         if (job.id === id) {
@@ -25,7 +25,7 @@ export class JobsService {
     this.selectedJobs.set(this.jobs().filter((job) => job.isApplied));
   }
 
-  cancelJob(id: number) {
+  cancelJob(id: string) {
     this.jobs.update((prev) =>
       prev.map((job) => {
         if (job.id === id) {
@@ -49,5 +49,9 @@ export class JobsService {
         }
       })
     );
+  }
+
+  onAddJobs(job: Jobs) {
+    this.jobs.update((prev) => [...prev, job]);
   }
 }

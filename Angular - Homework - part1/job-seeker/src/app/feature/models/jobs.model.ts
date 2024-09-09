@@ -1,5 +1,5 @@
 export interface Jobs {
-  id: number;
+  id: string;
   company: string;
   expires: string;
   position: string;
