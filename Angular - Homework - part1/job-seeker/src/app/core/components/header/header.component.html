@@ -1,0 +1,27 @@
+<header class="header">
+    <div class="logo">
+        <img src="images/jobs-logo.png" alt="" />
+    </div>
+    <nav>
+        <ul>
+
+            <li>
+                <a routerLink="/jobs" routerLinkActive="active">Jobs</a>
+            </li>
+            <li>
+                <a routerLink="/add-jobs" routerLinkActive="active">Add Jobs</a>
+            </li>
+            <li>
+                <a routerLink="/profile" routerLinkActive="active"><i class="fa-solid fa-user"></i></a>
+            </li>
+            <li>
+                <a routerLink="/contact-us" routerLinkActive="active"><i class="fa-solid fa-address-book"></i></a>
+            </li>
+            <li>
+                <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{
+                    exact: true
+                }"><i class="fa-solid fa-house"></i></a>
+            </li>
+        </ul>
+    </nav>
+</header>
