@@ -6,6 +6,7 @@ import { JobsService } from '../../../../core/service/jobs.service';
 import { Jobs, JobsFormValue } from '../../../models/jobs.model';
 import { Router } from '@angular/router';
 import { v4 as uuid } from 'uuid';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-add-jobs',
@@ -15,6 +16,7 @@ import { v4 as uuid } from 'uuid';
     JobsFormComponent,
     FooterComponent,
     JobsFormComponent,
+    ReactiveFormsModule,
   ],
   templateUrl: './add-jobs.component.html',
   styleUrl: './add-jobs.component.scss',

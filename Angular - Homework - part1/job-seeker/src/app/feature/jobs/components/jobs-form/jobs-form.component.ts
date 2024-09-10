@@ -19,9 +19,11 @@ import {
 export class JobsFormComponent {
   editReviewData = input<Jobs>();
   jobsForm = this.generateForm();
-  maxDescriptionLennght = 200;
+
   jobsSubmitted = signal(false);
   submitOutput = output<ReactiveFormsModule>();
+
+  maxDescriptionLennght = 200;
 
   constructor() {
     effect(() => {
@@ -63,7 +65,7 @@ export class JobsFormComponent {
     });
   }
 
-  onFormSubmit() {
+  onJobsFormSubmit() {
     this.jobsSubmitted.set(true);
     this.jobsForm.markAllAsTouched();
 

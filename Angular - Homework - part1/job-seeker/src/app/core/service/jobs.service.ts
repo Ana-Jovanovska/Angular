@@ -1,7 +1,6 @@
-import { inject, Injectable, signal } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 import { Jobs } from '../../feature/models/jobs.model';
 import { jobsMock } from '../../feature/jobs/jobs.mock';
-import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +8,10 @@ import { Router } from '@angular/router';
 export class JobsService {
   jobs = signal<Jobs[]>(jobsMock);
   selectedJobs = signal<Jobs[]>([]);
-  private router = inject(Router);
+
+  jobsFillter = computed<Jobs[]>(() => {
+    return this.jobs();
+  });
 
   applyJob(id: string) {
     this.jobs.update((prev) =>
@@ -53,5 +55,9 @@ export class JobsService {
 
   onAddJobs(job: Jobs) {
     this.jobs.update((prev) => [...prev, job]);
+  }
+
+  onGetById(id: string) {
+    this.jobs().filter((job) => job.id === id);
   }
 }
