@@ -1,0 +1,32 @@
+<div class="avaiable-container">
+    <div class="avaiable-header">
+        <h1>Avaible Jobs</h1>
+    </div>
+    <div class="avaiable-body">
+        <div class="avaiable-details-body">
+            <h2>{{job().company}}</h2>
+            <p>{{job().expires | date:'fullDate' }}</p>
+            <p>{{job().position}}</p>
+            <p>{{job().startingSalary | currency: 'EUR' : 'symbol' : '1.0'}} / {{job().workType}}</p>
+            <div class="button-apply">
+                <div class="button">
+                    <app-button text="Apply" (btnClick)="clickApplyButton(job().id)" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="more-details" appToogleDetails>
+        <h4>More...</h4>
+        <div class="more-details">
+            <p>{{job().location}}</p>
+            <p>{{job().country}}</p>
+            <p>{{job().qualifications}}</p>
+            <p>{{job().description}}</p>
+            <div class="company-button">
+                <div class="company-button">
+                    <app-button text="Company view" (btnClick)="clickCompanyButton()" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<div>
+    @for (job of selectJobs(); track job.id) {
+    <app-applied-item [selectedJobs]="job" />
+    }
+</div>

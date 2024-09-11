@@ -1,0 +1,85 @@
+.avaiable-container {
+  max-width: 600px;
+  margin: 50px;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .avaiable-header {
+    text-align: center;
+
+    h1 {
+      color: #343a40;
+      margin-bottom: 30px;
+    }
+  }
+
+  .avaiable-body {
+    text-align: center;
+
+    h2 {
+      font-size: 20px;
+      color: #007bff;
+    }
+
+    p {
+      font-size: 16px;
+      color: #495057;
+      margin-bottom: 10px;
+    }
+
+    .button-apply {
+      margin-top: 15px;
+      text-align: center;
+
+      .button {
+        display: inline-block;
+
+        app-button {
+          padding: 10px 20px;
+          color: #fff;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .more-details {
+    text-align: center;
+
+    h4 {
+      font-size: 18px;
+      color: #007bff;
+      cursor: pointer;
+      margin-bottom: 15px;
+    }
+
+    div {
+      padding: 10px;
+      background-color: #e9ecef;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #495057;
+      margin-bottom: 10px;
+    }
+
+    .company-button {
+      text-align: center;
+
+      app-button {
+        padding: 10px 20px;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}
