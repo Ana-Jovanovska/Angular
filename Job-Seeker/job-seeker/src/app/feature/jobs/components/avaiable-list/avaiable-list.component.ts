@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, input } from '@angular/core';
 import { JobsService } from '../../../../core/service/jobs.service';
 import { Jobs } from '../../model/jobs.model';
 import { AvaiableItemComponent } from '../avaiable-item/avaiable-item.component';
@@ -20,6 +20,7 @@ import { FilterPipePipe } from '../../../../core/pipe/filter-pipe.pipe';
 })
 export class AvaiableListComponent {
   private jobsService = inject(JobsService);
+  searchJobs = input<string>();
 
   jobs = computed<Jobs[]>(() => {
     return this.jobsService.jobs().filter((job) => !job.isApplied);

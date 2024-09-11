@@ -5,12 +5,14 @@ import { jobsMock } from '../../feature/jobs/jobs.mock';
 @Injectable({
   providedIn: 'root',
 })
-export class JobsService implements OnInit {
+export class JobsService {
   jobs = signal<Jobs[]>(jobsMock);
   selectedJobs = signal<Jobs[]>([]);
 
-  ngOnInit(): void {
-    console.log(this.jobs());
+  onSortByWork(value: string) {}
+
+  resetJobs() {
+    this.jobs.set(jobsMock);
   }
 
   applyJob(id: string) {

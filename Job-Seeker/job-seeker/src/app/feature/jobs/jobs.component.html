@@ -1,4 +1,23 @@
 <app-header />
+<div class="filter-container">
+    <div class="search-container">
+        <input type="text" placeholder="Please write a jobs..." [(ngModel)]="searchJobs" />
+    </div>
+    <div class="sort-container">
+        <app-button text="Remote" />
+        <app-button text="Onsite" />
+        <app-button text="Hybrid" />
+        <app-button text="Reset" (btnClick)="onResetJobs()" />
+    </div>
+    <div class="length-avaiable-jobs">
+        @if (searchJobs())
+        {
+        <p>Search Jobs</p>
+        }@else {
+        <p>Avaiable Jobs: {{jobs().length}}</p>
+        }
+    </div>
+</div>
 <div class="container">
     <app-avaiable-list />
     <app-applied-list />

@@ -11,3 +11,9 @@ export interface Jobs {
   description: string;
   isApplied: boolean;
 }
+
+export enum JobsFilter {
+  REMOTE = 'remote',
+  ONSITE = 'onsite',
+  HYBRID = 'hybrid',
+}
