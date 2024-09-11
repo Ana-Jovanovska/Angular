@@ -13,7 +13,7 @@ export class JobsService {
     return this.jobs();
   });
 
-  applyJob(id: string) {
+  applyJob(id: number) {
     this.jobs.update((prev) =>
       prev.map((job) => {
         if (job.id === id) {
@@ -27,7 +27,7 @@ export class JobsService {
     this.selectedJobs.set(this.jobs().filter((job) => job.isApplied));
   }
 
-  cancelJob(id: string) {
+  cancelJob(id: number) {
     this.jobs.update((prev) =>
       prev.map((job) => {
         if (job.id === id) {
@@ -39,25 +39,5 @@ export class JobsService {
       })
     );
     this.selectedJobs.set(this.jobs().filter((job) => job.isApplied));
-  }
-
-  onEditJobs(editJobsForm: Jobs) {
-    this.jobs.update((prev) =>
-      prev.map((job) => {
-        if (job.id === editJobsForm.id) {
-          return { ...editJobsForm };
-        } else {
-          return job;
-        }
-      })
-    );
-  }
-
-  onAddJobs(job: Jobs) {
-    this.jobs.update((prev) => [...prev, job]);
-  }
-
-  onGetById(id: string) {
-    this.jobs().filter((job) => job.id === id);
   }
 }
