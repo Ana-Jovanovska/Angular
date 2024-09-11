@@ -10,7 +10,7 @@
             <p>{{selectedJobs().startingSalary | currency: 'EUR' : 'symbol' : '1.0'}} / {{selectedJobs().workType}}</p>
             <div class="button-cancel">
                 <div class="button">
-                    <app-button text="Cancel" />
+                    <app-button text="Cancel" (btnClick)="clickCancelButton(selectedJobs().id)" />
                 </div>
             </div>
         </div>

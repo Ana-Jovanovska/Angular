@@ -7,7 +7,7 @@ import { AppliedItemComponent } from '../applied-item/applied-item.component';
 @Component({
   selector: 'app-applied-list',
   standalone: true,
-  imports: [CommonModule, AppliedItemComponent],
+  imports: [CommonModule, AppliedListComponent, AppliedItemComponent],
   templateUrl: './applied-list.component.html',
   styleUrl: './applied-list.component.scss',
 })
