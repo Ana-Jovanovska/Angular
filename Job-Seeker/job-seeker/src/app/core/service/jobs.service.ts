@@ -9,10 +9,30 @@ export class JobsService {
   jobs = signal<Jobs[]>(jobsMock);
   selectedJobs = signal<Jobs[]>([]);
 
-  onSortByWork(value: string) {}
+  onGetByIdJobs(id: string) {
+    const getJobs = this.jobs().find((job) => job.id === id);
+
+    return getJobs;
+  }
 
   resetJobs() {
     this.jobs.set(jobsMock);
+  }
+
+  onJobsEdit(jobsEdit: Jobs) {
+    this.jobs.update((prev) =>
+      prev.map((job) => {
+        if (job.id === jobsEdit.id) {
+          return { ...jobsEdit };
+        } else {
+          return job;
+        }
+      })
+    );
+  }
+
+  onAddedJobs(job: Jobs) {
+    this.jobs.update((prev) => [...prev, job]);
   }
 
   applyJob(id: string) {

@@ -1,0 +1,55 @@
+<section class="contact-us-container">
+    <div class="contact-us-form">
+        <h1>Contact Us</h1>
+        <form [formGroup]="reviewContactUsForm" (ngSubmit)="onContactUsForm()">
+            <div class="form-group">
+                <label>First Name*</label>
+                <input type="text" class="form-input" formControlName="firstName" placeholder="2-30 characters" />
+            </div>
+            <p *ngIf="reviewContactUsForm.controls.firstName?.errors && reviewContactUsForm.controls.firstName.touched"
+                class="control-error">
+                Must be above 2-30 characters
+            </p>
+            <div class="form-group">
+                <label>Last Name*</label>
+                <input type="text" class="form-input" formControlName="lastName" placeholder="2-30 characters" />
+            </div>
+            <p *ngIf="reviewContactUsForm.controls.lastName?.errors && reviewContactUsForm.controls.lastName.touched"
+                class="control-error">
+                Must be above 2-30 characters
+            </p>
+            <div class="form-group">
+                <label><i class="fa-solid fa-envelope"></i> Email*</label>
+                <input type="text" class="form-input" formControlName="email" placeholder="valid email" />
+            </div>
+            <p *ngIf="reviewContactUsForm.controls.email?.errors && reviewContactUsForm.controls.email.touched"
+                class="control-error">
+                Enter a valid email
+            </p>
+            <div class="form-group">
+                <label><i class="fa-solid fa-phone"></i> Phone Number*</label>
+                <input type="text" class="form-input" formControlName="phoneNumber" placeholder="valid phone number" />
+            </div>
+            <p *ngIf="reviewContactUsForm.controls.phoneNumber?.errors && reviewContactUsForm.controls.phoneNumber.touched"
+                class="control-error">
+                Enter a valid phone number
+            </p>
+            <div class="form-group">
+                <label for="message"><i class="fa-solid fa-message"></i> Message*</label>
+                <textarea formControlName="message" name="contactMessage" rows="5"
+                    placeholder="Add message for this website..."></textarea>
+                <small>{{ reviewContactUsForm.controls.message.value?.length }}/{{
+                    maxMessageLenghContactForm
+                    }}</small>
+            </div>
+            <p *ngIf="reviewContactUsForm.controls.message?.errors && reviewContactUsForm.controls.message.touched"
+                class="control-error">
+                You must have 500 characters
+            </p>
+            <div class="form-controls">
+                <app-button text="Send" type="submit" />
+            </div>
+
+        </form>
+    </div>
+</section>

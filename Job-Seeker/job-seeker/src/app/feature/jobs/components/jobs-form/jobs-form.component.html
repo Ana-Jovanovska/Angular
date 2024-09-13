@@ -1,0 +1,87 @@
+<section class="jobs-form-container">
+    <div class="jobs-form">
+
+        <form [formGroup]="reviewJobsForm" (ngSubmit)="onJobsForm()">
+            <div class="form-group">
+                <label>Company*</label>
+                <input type="text" class="form-input" formControlName="company" />
+            </div>
+            <p *ngIf="reviewJobsForm.controls.company?.errors && reviewJobsForm.controls.company.touched"
+                class="control-error">
+                Put company name
+            </p>
+            <div class="form-group">
+                <label>Expires*</label>
+                <input type="text" class="form-input" formControlName="expires" />
+            </div>
+            <p *ngIf="reviewJobsForm.controls.expires?.errors && reviewJobsForm.controls.expires.touched"
+                class="control-error">
+                Put expires
+            </p>
+            <div class="form-group">
+                <label>Position*</label>
+                <input type="text" class="form-input" formControlName="position" />
+            </div>
+            <p *ngIf="reviewJobsForm.controls.position?.errors && reviewJobsForm.controls.position.touched"
+                class="control-error">
+                Put position
+            </p>
+            <div class="form-group">
+                <label>Starting Salary*</label>
+                <input type="number" class="form-input" formControlName="startingSalary" />
+            </div>
+            <p *ngIf="reviewJobsForm.controls.startingSalary?.errors && reviewJobsForm.controls.startingSalary.touched"
+                class="control-error">
+                Put position
+            </p>
+            <div class="form-group">
+                <label for="expense-priority">Work Type*</label>
+                <select formControlName="workType" name="workType" id="work-type" class="form-control">
+                    <option value="remote">Remote</option>
+                    <option value="onsite">Onsite</option>
+                    <option value="hybrid">Hybrid</option>
+                </select>
+            </div>
+            <p *ngIf="reviewJobsForm.controls.workType?.errors && reviewJobsForm.controls.workType.touched"
+                class="control-error">
+                Put workType
+            </p>
+            <div class="form-group">
+                <label>Location*</label>
+                <input type="text" class="form-input" formControlName="location" />
+            </div>
+            <p *ngIf="reviewJobsForm.controls.location?.errors && reviewJobsForm.controls.location.touched"
+                class="control-error">
+                Put location
+            </p>
+            <div class="form-group">
+                <label>Country*</label>
+                <input type="text" class="form-input" formControlName="country" />
+            </div>
+            <p *ngIf="reviewJobsForm.controls.country?.errors && reviewJobsForm.controls.country.touched"
+                class="control-error">
+                Put country
+            </p>
+            <div class="form-group">
+                <label>Qualifications*</label>
+                <input type="text" class="form-input" formControlName="qualifications" />
+            </div>
+            <p *ngIf="reviewJobsForm.controls.qualifications?.errors && reviewJobsForm.controls.qualifications.touched"
+                class="control-error">
+                Put qualifications
+            </p>
+            <div class="form-group">
+                <label for="expense-description">Description*</label>
+                <textarea name="expenseescription" id="expense-description" rows="3" cols="30"
+                    formControlName="description"></textarea>
+            </div>
+            <p *ngIf="reviewJobsForm.controls.description?.errors && reviewJobsForm.controls.description.touched"
+                class="control-error">
+                Put description
+            </p>
+            <div class="form-controls">
+                <app-button [text]="editJobsData() ? 'Edit' : 'Add'" type="submit" />
+            </div>
+        </form>
+    </div>
+</section>

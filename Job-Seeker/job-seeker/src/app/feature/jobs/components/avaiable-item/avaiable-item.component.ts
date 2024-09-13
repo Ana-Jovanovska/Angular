@@ -1,6 +1,6 @@
 import { Component, inject, input } from '@angular/core';
 import { ButtonComponent } from '../../../../shared/button/button.component';
-import { ToogleDetailsDirective } from '../../../../core/components/directives/toogle-details.directive';
+import { ToogleDetailsDirective } from '../../../../core/directives/toogle-details.directive';
 import { JobsService } from '../../../../core/service/jobs.service';
 import { Jobs } from '../../model/jobs.model';
 import { CommonModule } from '@angular/common';

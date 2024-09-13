@@ -1,0 +1,67 @@
+.contact-us-container {
+  display: grid;
+  place-items: center;
+  padding: 70px;
+
+  .contact-us-form {
+    padding: 60px;
+    background-color: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    h1 {
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+
+      label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #333;
+      }
+
+      .form-input,
+      textarea {
+        font-family: "Nunito", sans-serif;
+        width: 100%;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 15px;
+        transition: border-color 0.3s ease;
+
+        &:focus {
+          border-color: #007bff;
+          outline: none;
+        }
+      }
+
+      textarea {
+        resize: vertical;
+      }
+
+      small {
+        text-align: center;
+        display: block;
+        font-size: 13px;
+        color: #666;
+      }
+    }
+
+    .form-controls {
+      text-align: center;
+    }
+  }
+  .control-error {
+    text-align: center;
+    color: rgb(223, 72, 72);
+    font-size: 15px;
+  }
+}
