@@ -13,4 +13,7 @@ export class JobsApiService {
   fetchJobsById(id: string) {
     return this.http.get<Jobs>(`${BASE_URL}/jobs/${id}`);
   }
+  fetchAllJobs() {
+    return this.http.get<Jobs[]>(`${BASE_URL}/jobs`);
+  }
 }
